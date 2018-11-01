@@ -1,12 +1,12 @@
 {
   "name": "redux-thunk-actions",
   "version": "1.2.1",
-  "description": "",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
     "build": "npm run clean && babel src --out-dir lib --ignore *.specs.js",
     "test": "mocha --compilers js:babel-register test/*.js --require babel-polyfill",
+    "test-watch": "npm run test -- --watch --bail ./test",
     "prepublish": "npm run test && npm run build"
   },
   "files": [
@@ -42,6 +42,6 @@
   "dependencies": {
     "redux-actions": "^0.10.1"
   },
-  "author": "Gustavo Machado <machadogj@gmail.com>",
+  "author": "Gustavo Machado <machadogj@gmail.com>, William Grisa <grisa.william@gmail.com>",
   "license": "MIT"
 }
