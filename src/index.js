@@ -68,7 +68,7 @@ export function createActionThunk(type, asyncFunction) {
   }
 
   factory.NAME = type
-  factory.START = actionCreators[TYPE_STARTED].toString()
+  factory.STARTED = actionCreators[TYPE_STARTED].toString()
   factory.SUCCEEDED = actionCreators[TYPE_SUCCEEDED].toString()
   factory.FAILED = actionCreators[TYPE_FAILED].toString()
   factory.ENDED = actionCreators[TYPE_ENDED].toString()
