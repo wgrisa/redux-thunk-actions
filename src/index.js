@@ -26,7 +26,7 @@ export function createActionThunk(type, asyncFunction) {
     let result
     let startedAt = new Date().getTime()
 
-    dispatch(actionCreators[TYPE_STARTED](args))
+    dispatch(actionCreators[TYPE_STARTED](...args))
 
     const succeeded = (data) => {
       const successAction = data && data.payload ? successActionWithMeta(data) : actionCreators[TYPE_SUCCEEDED](data)
